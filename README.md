@@ -6,16 +6,18 @@
 |email|text|null: false|
 |password|text|null: false|
 ### Association
-- has_many :groups_users, through:  :massages
+- has_many :groups_users
 - has_many :massages
+- has_many :groups, through:  :groups_users
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :groups_users, through:  :massages
+- has_many :groups_users
 - has_many :massages
+- has_many :users, through:  :groups_users
 ## groups_usersテーブル
 
 |Column|Type|Options|
