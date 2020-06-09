@@ -27,9 +27,9 @@
         こんばんは
   .mainbar__sendbar
     %form.mainbar__sendbar__main
+      %input.mainbar__sendbar__main__input{type: "text", placeholder: "type a meaasge"}/
       .mainbar__sendbar__main__kari
-        %input.mainbar__sendbar__main__kari__input{type: "text", placeholder: "type a meaasge"}/
-        %label{class:"mainbar__sendbar__main__kari__image"}
+        %label.mainbar__sendbar__main__kari__image
           = icon('far', 'image fa-lg')
           %input{type: "file", class: "image-file"}
       %input.maimbar__sendbar__main__input__button{type: "submit", value: "Send"}/
