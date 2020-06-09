@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+.header{
+  width: 300px;
+  background-color: #2f3e51;
+&__up {
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+&__up__name{
+  height: 20px;
+  width: 260px;
+  margin: 0 20px;
+  position: relative;
+  font-weight: bold;
+  color: white;
+}
+&__name__lists{
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  left: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+.my-example{
+  color: #ffffff;
+  margin-left: 5px;
+}
+}
+.header__groups{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0px 20px;
+  box-sizing: border-box;
+&__group{
+  height: 105px;
+  width: 260px;
+  background-color: #2f3e51;
+  padding: 20px 0px 40px;
+  }
+}
+.group__name{
+  font-size: 15px;
+  height: 23px;
+  width: 260px;
+  color: #ffffff;
+}
+.group__massage{
+  height: 17px;
+  width: 260px;
+  margin: 5px 0px 0px;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.mainbar{
+  width: calc(100vw - 300px);
+&__upbar{
+  height: 100px;
+  width: calc(100vw - 300px);
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+&__upbar__left{
+  width: 113.08px;
+  height: 99px;
+}
+&__upbar__left__group{
+  font-size: 20px;
+  color: #333333;
+  margin: 35px 0px 0px;
+}
+&__upbar__left__memberlist{
+  font-size: 12px;
+  color: #999999;
+  margin: 15px 0px 0px; 
+  display: flex;
+}
+&__upbar__right{
+  width: 72.72px;
+  height: 40px;
+  margin: 28px 0px 0px;
+  padding: 0px 20px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #38aef0;
+  border: 1px solid #38aef0;
+}
+&__chat{
+  height: calc(100vh - 100px - 90px);
+  background-color: #fafafa;
+  padding: 35px 40px 0px;
+&__talk{
+  margin-bottom: 46px;
+  height: 57px;
+}
+&__talk__box{
+  height: 24px;
+  display: flex;
+}
+&__talk__box__name{
+  font-size: 16px;
+  color: #333333;
+}
+&__talk__box__time{
+  font-size: 12px;
+  color: #999999;
+  padding: 0px 0px 0px 10px;
+}
+&__talk__content{
+  height: 21px;
+  font-size: 14px;
+  color: #434a54;
+  margin: 12px 0px 0px 0px;
+}
+}
+}
+.mainbar__sendbar{
+  height: 90px;
+  background-color: #dddddd;
+  padding: 20px 50px 20px 40px;
+&__main{
+  width: 1050px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+&__main__kari{
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+&__main__kari__input{
+  height: 50px;
+  width: 100%;
+  padding: 0px 45px 0px 15px;
+}
+&__main__kari__image{
+  width: 25px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 15px
+}
+}
+.image-file{
+  display: none;
+  color: black;
+}
+.maimbar__sendbar__main__input__button{
+  width: 100.34px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #38aef0;
+}
+
+
+
+
+
