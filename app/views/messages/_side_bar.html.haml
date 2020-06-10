@@ -1,12 +1,13 @@
 .header
   .header__up
-    %p.header__up__name masa
+    %h3.header__up__name
+      = current_user.name
     %ul.header__name__lists
       %li.list
-      = link_to "#"do
+      = link_to "#" do
         = icon('fas', 'edit my-example')
       %li.list
-      = link_to "#"do
+      = link_to edit_user_path(current_user) do
         = icon('fas', 'cog my-example')
 
   .header__groups
