@@ -1,22 +1,24 @@
 .header
-  .header__up
-    %h3.header__up__name
-      = current_user.name
-    %ul.header__name__lists
-      %li.list
-      = link_to "#" do
-        = icon('fas', 'edit my-example')
-      %li.list
-      = link_to edit_user_path(current_user) do
-        = icon('fas', 'cog my-example')
+  .leftheader
+    .leftheader__list
+      %h3.leftheader__name
+        = current_user.name
+      %ul.leftheader__iconlists
+        %li.leftheader__icon
+          = link_to new_group_path do
+            = icon('fas', 'edit')
+        %li.leftheader__icon
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
 
-  .header__groups
-    .header__groups__group
-      .group__name techcamp
-      .group__massage まだメッセージはありません
-    .header__groups__group
-      .group__name techcamp2
-      .group__massage まだメッセージはありません
+  .grouplist
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__massage
+            まだメッセージはありません
 
 
 
