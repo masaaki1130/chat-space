@@ -1,37 +1,24 @@
-.mainbar
-  .mainbar__upbar
-    .mainbar__upbar__left
-      .mainbar__upbar__left__group
-        test
-      .mainbar__upbar__left__memberlist
+.chat
+  .mainbarupbar
+    .mainbarupbar__left
+      .mainbarupbar__leftgroup
+        = @group.name
+      %ul.mainbarupbar__memberlist
         Menber:
-        .mainbar__upbar__left__memberlist__name
-          masa
-    %input.mainbar__upbar__right{type: "submit", value: "Edit"}/
-  .mainbar__chat
-    .mainbar__chat__talk
-      .mainbar__chat__talk__box
-        .mainbar__chat__talk__box__name
-          masa
-        .mainbar__chat__talk__box__time
-          2020年06月08日 19時13分
-      .mainbar__chat__talk__content
-        おはよう
-    .mainbar__chat__talk
-      .mainbar__chat__talk__box
-        .mainbar__chat__talk__box__name
-          masa
-        .mainbar__chat__talk__box__time
-          2020年06月08日 19時13分
-      .mainbar__chat__talk__content
-        こんばんは
-  .mainbar__sendbar
-    %form.mainbar__sendbar__main
-      %input.mainbar__sendbar__main__input{type: "text", placeholder: "type a meaasge"}/
-      .mainbar__sendbar__main__kari
-        %label.mainbar__sendbar__main__kari__image
-          = icon('far', 'image fa-lg')
-          %input{type: "file", class: "image-file"}
-      %input.maimbar__sendbar__main__input__button{type: "submit", value: "Send"}/
+        %li.mainbarupbar__name
+          - @group.users.each do |user|
+            = user.name
+    = link_to edit_group_path(@group) ,class: "mainbarupbar__editButton" do
+      Edit
 
+  .messagelist
+    = render @messages
 
+  .footer
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .form__contents
+        = f.text_field :content, class: 'form__input', placeholder: 'type a message'
+        = f.label :image, class: 'form__image' do
+          = icon('far', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'from__hiden'
+      = f.submit 'Send', class: 'form__submit'
